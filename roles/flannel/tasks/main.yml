@@ -2,7 +2,7 @@
 - name: installing flannel
   block:
     - name: initialize the cluster
-      shell: kubeadm init --pod-network-cidr=10.244.0.0/16 >> cluster_initialized.txt
+      shell: kubeadm init --ignore-preflight-errors=All --pod-network-cidr=10.244.0.0/16 >> cluster_initialized.txt
       args:
         chdir: $HOME
         creates: cluster_initialized.txt
@@ -27,5 +27,4 @@
       args:
         chdir: $HOME
         creates: pod_network_setup.txt
-  become: true
-  any_errors_fatal: false      
+  become: true    
