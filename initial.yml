@@ -6,6 +6,8 @@
       tag: preconfig
     - role: installing_kubectl
       tag: installing_kubectl
+    - role: flannel
+      tag: flannel
 
 - name: workers servers
   hosts: workers
