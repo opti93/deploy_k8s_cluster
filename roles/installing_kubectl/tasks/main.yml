@@ -1,6 +1,6 @@
 ---
 - name: install kubectl
   apt:
-    name: kubectl
+    name: kubectl=1.24.6-00
     state: present
     force: yes
