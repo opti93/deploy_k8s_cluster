@@ -1,0 +1,14 @@
+---
+- name: master server
+  hosts: control_plane
+  roles:
+    - role: preconfig
+      tag: preconfig
+    - role: installing_kubectl
+      tag: installing_kubectl
+
+- name: workers servers
+  hosts: workers
+  roles:
+    - role: preconfig
+      tags: preconfig
