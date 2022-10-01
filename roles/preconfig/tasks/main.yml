@@ -59,7 +59,17 @@
         name: kubeadm=1.22.4-00
         state: present
     
-    - name: Disable SWAP since kubernetes can't work with swap enabled (1/2)
-      shell: swapoff -a
+    - name: Remove swapfile from /etc/fstab
+      mount:
+        name: "{{ item }}"
+        fstype: swap
+        state: absent
+      with_items:
+        - swap
+        - none
+
+    - name: Disable swap
+      command: swapoff -a
+      when: ansible_swaptotal_mb > 0
 
   become: true
