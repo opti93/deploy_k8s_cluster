@@ -1,8 +1,5 @@
-# --------------------------------
 # deploing k8s cluster by ansible
-#
-# Made by Opti93
-# --------------------------------
+Made by Opti93
 
 ## Installation
 
