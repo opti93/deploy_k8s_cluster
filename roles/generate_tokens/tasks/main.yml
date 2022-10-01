@@ -1,6 +1,5 @@
 ---
 - name: generating tokens
-  gather_facts: false
   block:
     - name: get join command
       shell: kubeadm token create --print-join-command
