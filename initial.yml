@@ -8,9 +8,13 @@
       tag: installing_kubectl
     - role: flannel
       tag: flannel
+    - role: generate_tokens
+      tag: generate_tokens
 
 - name: workers servers
   hosts: workers
   roles:
     - role: preconfig
       tags: preconfig
+    - role: join_worker
+      tags: join_worker
