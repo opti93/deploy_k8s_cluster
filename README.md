@@ -1,1 +1,11 @@
-# deploy_k8s_cluster
+# --------------------------------
+# deploing k8s cluster by ansible
+#
+# Made by Opti93
+# --------------------------------
+
+## Installation
+
+```sh
+ansible-playbook -i inventory/cluster.ini initial.yml
+```
