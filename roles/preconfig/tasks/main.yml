@@ -50,13 +50,13 @@
 
     - name: install kubelet
       apt:
-        name: kubelet=1.22.4-00
+        name: kubelet
         state: present
         update_cache: true
 
     - name: install kubeadm
       apt:
-        name: kubeadm=1.22.4-00
+        name: kubeadm
         state: present
     
     - name: Remove swapfile from /etc/fstab
